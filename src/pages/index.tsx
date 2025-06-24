@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Wrench, Clock, Users, Star, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const services = [
@@ -36,19 +37,23 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-cover bg-center bg-no-repeat text-white py-20 from-blue-600 to-blue-800 text-white py-20" style={{
+    backgroundImage: 'url("/image/Supra.jpg")'
+  }}>
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Автосервис <span className="text-yellow-400">Авангард</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Профессиональный ремонт и обслуживание автомобилей в Москве
+              Профессиональный ремонт и обслуживание автомобилей в Кара-Балте
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-                Записаться на ремонт
-              </Button>
+              <Link href="https://wa.me/+996777775540"> {/* ← путь куда перейти */}
+  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
+    Записаться на ремонт
+  </Button>
+</Link>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
                 Узнать цены
               </Button>
